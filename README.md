@@ -35,12 +35,7 @@
   Restrict specific commands from being used only in certain worlds.
 - <b>Easy Command Management</b>:
   Add, remove, and manage banned commands through in-game commands.
-
-# 📜 Notes
-- If you find a BUG please Open an Issue
-- If you want to suggest a feature please Open a Pull Request
-- Don't forget to give Star to me 🙃
-
+  
 # 🔁 Installation
 
 1. Download the latest version in [poggit](https://poggit.pmmp.io/p/BanCmd).
