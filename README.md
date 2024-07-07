@@ -49,5 +49,6 @@ CONTACT
 - <b>Discord</b>: Fredy Ma'ruf#0905
 - <b>GitHub</b>: MyFreds
 - <b>Email</b>: id.luxy.store@gmail.com
+
 CREDIT
 - Icon by [Freepix - Flaticon](https://www.flaticon.com/search/4?word=banned)
