@@ -71,7 +71,7 @@ final class Main extends PluginBase implements Listener
                     if ($worldAction === "add") {
                         $this->cfg->setNested("commands.worlds.$worldName.$cmd", true);
                         $this->cfg->save();
-                        $sender->sendMessage("§7[§cBanCmd§7] §aCommand §f$cmd §ahas been banned in world §f$worldName§a.");
+                        $sender->sendMessage("§7[§cBanCmd§7] §aCommand §f$cmd §ahas been banned in world §f$worldName.");
                     } elseif ($worldAction === "remove") {
                         $this->cfg->removeNested("commands.worlds.$worldName.$cmd");
                         $this->cfg->save();
