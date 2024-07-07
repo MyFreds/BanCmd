@@ -12,21 +12,13 @@ use pocketmine\event\server\CommandEvent;
 final class Main extends PluginBase implements Listener 
 {
     private Config $cfg;
-    private array $bannedCommands = [];
     
     public function onEnable(): void{
         @mkdir($this->getDataFolder());
         
         $this->cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, ["commands" => []]);
         
-        $this->initCommands();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    }
-
-    private function initCommands(): void {
-        foreach ($this->cfg->get("commands", []) as $cmd => $data) {
-            $this->bannedCommands[strtolower($cmd)] = $data;
-        }
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
@@ -47,7 +39,6 @@ final class Main extends PluginBase implements Listener
                     $cmd = strtolower($args[1]);
                     $this->cfg->setNested("commands.global.$cmd", true);
                     $this->cfg->save();
-                    $this->initCommands();
                     $sender->sendMessage("§7[§cBanCmd§7] §aGlobal command §f$cmd §ahas been banned.");
                     break;
 
@@ -59,7 +50,6 @@ final class Main extends PluginBase implements Listener
                     $cmd = strtolower($args[1]);
                     $this->cfg->removeNested("commands.global.$cmd");
                     $this->cfg->save();
-                    $this->initCommands();
                     $sender->sendMessage("§7[§cBanCmd§7] §bGlobal command §f$cmd §bhas been unbanned.");
                     break;
 
@@ -81,12 +71,10 @@ final class Main extends PluginBase implements Listener
                     if ($worldAction === "add") {
                         $this->cfg->setNested("commands.worlds.$worldName.$cmd", true);
                         $this->cfg->save();
-                        $this->initCommands();
-                        $sender->sendMessage("§7[§cBanCmd§7] §aCommand §f$cmd §ahas been banned in world §f" . $worldName . "§a.");
+                        $sender->sendMessage("§7[§cBanCmd§7] §aCommand §f$cmd §ahas been banned in world §f$worldName§a.");
                     } elseif ($worldAction === "remove") {
                         $this->cfg->removeNested("commands.worlds.$worldName.$cmd");
                         $this->cfg->save();
-                        $this->initCommands();
                         $sender->sendMessage("§7[§cBanCmd§7] §bCommand §f$cmd §bhas been unbanned in world §f$worldName.");
                     } else {
                         $sender->sendMessage("§7[§cBanCmd§7] §fUsage: /bancmd world <add|remove> <command> <worldName>");
