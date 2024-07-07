@@ -12,7 +12,7 @@
   <img src="https://github.com/MyFreds/BanCmd/blob/main/icon.png" alt="Logo" width="80" height="80">
   <h3>BanCmd</h3>
   <p align="center">
-    **BanCommands** is a PocketMine-MP plugin designed to empower server administrators by allowing them to restrict the usage of specific commands globally or in specific worlds
+    <b>BanCommands</b> is a PocketMine-MP plugin designed to empower server administrators by allowing them to restrict the usage of specific commands globally or in specific worlds
 
 
 [View in Poggit](https://poggit.pmmp.io/ci/MyFreds/BanCmd/BanCmd) · [Report a bug](https://github.com/MyFreds/BanCmd/issues) · [Request a feature](https://github.com/MyFreds/BanCmd/issues)
@@ -29,11 +29,11 @@
 
 # 📌 Features
 
-- **Global Command Bans**:
+- <b>Global Command Bans</b>:
   Restrict specific commands from being used server-wide.
-- **World-Specific Command Bans**:
+- <b>World-Specific Command Bans</b>:
   Restrict specific commands from being used only in certain worlds.
-- **Easy Command Management**:
+- <b>Easy Command Management</b>:
   Add, remove, and manage banned commands through in-game commands.
 
 # 📜 Notes
@@ -49,7 +49,7 @@
 4. Done!
 
 # 🪪 Contact Information
-- **YouTube**: Fredy Ma'ruf
-- **Discord**: Fredy Ma'ruf#0905
-- **GitHub**: MyFreds
-- **Email**: id.luxy.store@gmail.com
+- <b>YouTube</b>: Fredy Ma'ruf
+- <b>Discord</b>: Fredy Ma'ruf#0905
+- <b>GitHub</b>: MyFreds
+- <b>Email</b>: id.luxy.store@gmail.com
