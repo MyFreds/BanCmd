@@ -1,0 +1,13 @@
+name: BanCmd
+main: Fred\bancmd\Main
+version: 1.0.0
+api: 5.0.0
+author: Fred
+commands:
+  bancmd:
+    description: Ban or allow commands globally or per world.
+    permission: bancmd.use
+permissions:
+  bancmd.use:
+    description: Allows the use of the BanCmd plugin
+    default: op
